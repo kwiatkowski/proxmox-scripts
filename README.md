@@ -31,7 +31,7 @@ Install the mosquitto package and its client software.
 
 `apt-get install mosquitto mosquitto-clients`
 
-More information [about mosquitto](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8)
+More information [about mosquitto](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8).
 
 ## Scripts
 
