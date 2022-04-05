@@ -41,7 +41,7 @@ More information [about hddtemp](https://wiki.archlinux.org/title/Hddtemp)
 
 ### home_assistant_mqtt_disk_mornitor.sh
 
-Posting messages with disk information such as:
+Publish MQTT messages with disk information such as:
 
 1. size
 2. available
@@ -49,7 +49,7 @@ Posting messages with disk information such as:
 4. used_percentage
 5. temperature
 
-Using:
+Use:
 `home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas'`
 
 `/dev/sda1` - physical partition
@@ -59,3 +59,18 @@ Using:
 Adding to crontab:
 
 `* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas' >> /home/scripts/logs/home_assistant_mqtt_disk_mornitor.log 2>&1`
+
+### home_assistant_mqtt_processor_monitor.sh
+
+Publish MQTT messages with processor information such as:
+
+1. temperature
+
+Use:
+`home_assistant_mqtt_processor_monitor.sh 'monitor/proxmox/procesor'`
+
+`monitor/proxmox/procesor` - mqtt topic defined in HA configuration
+
+Adding to crontab:
+
+`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_processor_monitor.sh 'monitor/proxmox/procesor' >> /home/scripts/logs/home_assistant_mqtt_processor_monitor.log 2>&1`
