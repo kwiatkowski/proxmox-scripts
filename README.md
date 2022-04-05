@@ -58,4 +58,4 @@ Using:
 
 Adding to crontab:
 
-`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas' >> /home/scripts/home_assistant_mqtt_disk_mornitor.log 2>&1`
+`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas' >> /home/scripts/logs/home_assistant_mqtt_disk_mornitor.log 2>&1`
