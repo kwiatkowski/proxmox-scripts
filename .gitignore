@@ -5,5 +5,5 @@
 !.env.example
 
 # Logs
-*.log
+logs
 
