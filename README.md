@@ -15,8 +15,6 @@ MQTT_HOST=192.168.0.199
 MQTT_PORT=1883
 MQTT_USER=user
 MQTT_PASS=pass
-
-DISK=/dev/sda1
 ```
 
 ## Installation
@@ -39,6 +37,13 @@ More information [about mosquitto](https://www.digitalocean.com/community/tutori
 
 Publishing messages with information about the disk.
 
-Using and adding to crontab:
+Using:
+`home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas'`
 
-`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_mornitor.sh >> /home/scripts/cron.log 2>&1`
+`/dev/sda1` - physical partition
+
+`monitor/proxmox/disc/nas` - mqtt topic defined in HA configuration
+
+Adding to crontab:
+
+`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas' >> /home/scripts/home_assistant_mqtt_disk_mornitor.log 2>&1`
