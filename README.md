@@ -23,7 +23,7 @@ Update with apt-get to pull in the new package information.
 
 `apt-get update`
 
-### Step 1 - Installation Mosquitto
+### Step 1 - [Installation Mosquitto](https://mosquitto.org/)
 
 Install the mosquitto package and its client software.
 
@@ -31,11 +31,23 @@ Install the mosquitto package and its client software.
 
 More information [about mosquitto](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-8).
 
+### Step 2 - [Installation Hddtemp](https://wiki.archlinux.org/title/Hddtemp)
+
+`apt-get install hddtemp`
+
+More information [about hddtemp](https://wiki.archlinux.org/title/Hddtemp)
+
 ## Scripts
 
 ### home_assistant_mqtt_disk_mornitor.sh
 
-Publishing messages with information about the disk.
+Posting messages with disk information such as:
+
+1. size
+2. available
+3. used
+4. used_percentage
+5. temperature
 
 Using:
 `home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas'`
