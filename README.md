@@ -50,6 +50,7 @@ Posting messages with disk information such as:
 5. temperature
 
 Using:
+
 `home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas'`
 
 `/dev/sda1` - physical partition
