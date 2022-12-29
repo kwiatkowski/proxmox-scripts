@@ -1,6 +1,6 @@
 # proxmox-scripts
 
-Publication information about the host to the mosquitto broker.
+Publish information about the host to the mosquitto broker.
 
 ## Configuration
 
