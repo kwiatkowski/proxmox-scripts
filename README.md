@@ -37,6 +37,12 @@ More information [about mosquitto](https://www.digitalocean.com/community/tutori
 
 More information [about hddtemp](https://wiki.archlinux.org/title/Hddtemp)
 
+### Step 3 - [Installation Lm-sensors](https://github.com/lm-sensors/lm-sensors)
+
+`apt-get install lm-sensors`
+
+More information [about lm-sensors](https://github.com/lm-sensors/lm-sensors)
+
 ## Scripts
 
 ### home_assistant_mqtt_disk_mornitor.sh
@@ -59,7 +65,7 @@ Use:
 
 Adding to crontab:
 
-`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_mornitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas' >> /home/scripts/logs/home_assistant_mqtt_disk_mornitor.log 2>&1`
+`* * * * * /bin/bash /home/scripts/home_assistant_mqtt_disk_monitor.sh '/dev/sda1' 'monitor/proxmox/disc/nas' >> /home/scripts/logs/home_assistant_mqtt_disk_monitor.log 2>&1`
 
 ### home_assistant_mqtt_processor_monitor.sh
 
