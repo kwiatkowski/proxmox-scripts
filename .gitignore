@@ -3,6 +3,7 @@
 .env
 .env.*
 !.env.example
+.state
 
 # Logs
 logs
