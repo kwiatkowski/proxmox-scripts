@@ -32,14 +32,12 @@ prev_size=$(grep "$2/size" "$STATEFILE" | cut -d "=" -f 2 || echo "")
 prev_available=$(grep "$2/available" "$STATEFILE" | cut -d "=" -f 2 || echo "")
 prev_used=$(grep "$2/used" "$STATEFILE" | cut -d "=" -f 2 || echo "")
 prev_used_percentage=$(grep "$2/used_percentage" "$STATEFILE" | cut -d "=" -f 2 || echo "")
-prev_temp=$(grep "$2/temperature" "$STATEFILE" | cut -d "=" -f 2 || echo "")
 
 # Odczytanie aktualnych wartości
 size=$(df -h "$1" | awk '{ print $2 }' | tail -n 1 | cut -d 'G' -f 1)
 available=$(df -h "$1" | awk '{ print $4 }' | tail -n 1 | cut -d 'G' -f 1)
 used=$(df -h "$1" | awk '{ print $3 }' | tail -n 1 | cut -d 'G' -f 1)
 used_percentage=$(df -h "$1" | awk '{ print $5 }' | tail -n 1 | cut -d '%' -f 1)
-temp=$(/usr/sbin/hddtemp -n "$1")
 
 # Aktualizacja pliku stanu i wysłanie danych tylko w przypadku zmiany
 if [ "$size" != "$prev_size" ]; then
